@@ -29,6 +29,7 @@
                                         <th style="width: 10px">STT</th>
                                         <th>Name</th>
                                         <th>Avatar</th>
+                                        <th>Price</th>
                                         <th>Description</th>
                                         <th>Hot</th>
                                         <th>Status</th>
@@ -39,7 +40,10 @@
                                         <tr>
                                             <td>{{ $product->id }}</td>
                                             <td>{{ $product->pro_name }}</td>
-                                            <td>{{ $product->pro_avatar }}</td>
+                                            <td>
+                                                <img src="{{ pare_url_file($product -> pro_avatar) }}" style="width:80px">
+                                            </td>
+                                            <td>{{ number_format($product->pro_price , 0, '', '.') }} VND</td>
                                             <td>{{ $product->pro_description }}</td>
                                             <td>
                                                 @if($product-> pro_hot == 1)
@@ -66,9 +70,9 @@
                             </table>
                         </div>
                     </div>
-                    {{-- <div class="box-footer">
-                        {{ $keywords->links(); }}
-                    </div> --}}
+                    <div class="d-flex justify-content-center">
+                        {{ $products->links(); }}
+                    </div>
                 </div>
         </div>
     </section>

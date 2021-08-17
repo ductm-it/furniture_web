@@ -1,5 +1,6 @@
 @extends('layouts.master_frontend')
 @section('content')
+
 <div class="container">
     <div class="htc__product__container">
         <!-- Start Product MEnu -->
@@ -7,10 +8,10 @@
             <div class="col-md-12">
                 <div class="product__menu">
                     <button data-filter="*"  class="is-checked">All</button>
-                    <button data-filter=".cat--1">Furnitures</button>
-                    <button data-filter=".cat--2">Bags</button>
-                    <button data-filter=".cat--3">Decoration</button>
-                    <button data-filter=".cat--4">Accessories</button>
+                    <button data-filter=".cat--1">Living Room Furniture</button>
+                    <button data-filter=".cat--2">Bedroom Furniture</button>
+                    <button data-filter=".cat--3">Kitchen & Dining Furniture</button>
+                    <button data-filter=".cat--4">Office Furniture</button>
                 </div>
             </div>
         </div>
@@ -18,17 +19,18 @@
         <div class="row">
             <div class="product__list">
                 <!-- Start Single Product -->
+                @foreach($products as $product)
                 <div class="col-md-3 single__pro col-lg-3 cat--1 col-sm-4 col-xs-12">
                     <div class="product foo">
                         <div class="product__inner">
                             <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/1.png" alt="product images">
+                                <a href="{{ route('get.product.detail',[$product->pro_slug, $product->id]) }}">
+                                    <img src="{{ asset(pare_url_file($product->pro_avatar)) }}" alt="product images" style="height:270px; width:270px;>
                                 </a>
                             </div>
                             <div class="product__hover__info">
                                 <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
+                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="{{ route('get.product.detail',[$product->pro_slug, $product->id]) }}"><span class="ti-plus"></span></a></li>
                                     <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
                                 </ul>
                             </div>
@@ -37,452 +39,26 @@
                             </div>
                         </div>
                         <div class="product__details">
-                            <h2><a href="product-details.html">Simple Black Clock</a></h2>
+                            <h2 class="product-name">
+                                <a href="{{ route('get.product.detail',[$product->pro_slug, $product->id]) }}">{{ $product-> pro_name }}</a>
+                            </h2>
                             <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
+                                {{-- <li class="old__price">$16.00</li> --}}
+                                <li class="new__price">{{ number_format($product->pro_price , 0, '', '.') }} VND</li>
                             </ul>
                         </div>
                     </div>
                 </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 cat--1 col-sm-4 col-xs-12">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/2.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">BO&Play Wireless Speaker</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--2">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/3.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Brone Candle</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--4">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/4.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Brone Lamp Glasses</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 cat--1 col-sm-4 col-xs-12 cat--2">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/5.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Clothes Boxed</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--3">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/6.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Liquid Unero Ginger Lily</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--2">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/7.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Miliraty Backpack</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--2">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/8.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Saved Wines Corkscrew</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--4">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/9.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Simple Fabric Bags</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--3">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/10.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Simple Fabric Chair</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--4">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/11.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Unero Round Sunglass</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--3">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/12.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Unero Small Bag</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--3">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/13.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Wood Complex Lamp Box</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--4">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/14.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Wood Long TV Board</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 col-sm-4 col-xs-12 cat--4">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/15.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Wood Simple Chair V2</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Single Product -->
-                <!-- Start Single Product -->
-                <div class="col-md-3 single__pro col-lg-3 hidden-sm col-xs-12 cat--3">
-                    <div class="product foo">
-                        <div class="product__inner">
-                            <div class="pro__thumb">
-                                <a href="#">
-                                    <img src="images/product/16.png" alt="product images">
-                                </a>
-                            </div>
-                            <div class="product__hover__info">
-                                <ul class="product__action">
-                                    <li><a data-toggle="modal" data-target="#productModal" title="Quick View" class="quick-view modal-view detail-link" href="#"><span class="ti-plus"></span></a></li>
-                                    <li><a title="Add TO Cart" href="cart.html"><span class="ti-shopping-cart"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="add__to__wishlist">
-                                <a data-toggle="tooltip" title="Add To Wishlist" class="add-to-cart" href="wishlist.html"><span class="ti-heart"></span></a>
-                            </div>
-                        </div>
-                        <div class="product__details">
-                            <h2><a href="product-details.html">Wood Simple Clock</a></h2>
-                            <ul class="product__price">
-                                <li class="old__price">$16.00</li>
-                                <li class="new__price">$10.00</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
                 <!-- End Single Product -->
             </div>
+            <div class="text-center">
+                <div class="d-flex justify-content-center">
+                    {{ $products->links( "pagination::bootstrap-4") }}
+                </div>
+            </div>
         </div>
+
     </div>
 </div>
 @stop

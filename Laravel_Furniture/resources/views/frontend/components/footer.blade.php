@@ -1,5 +1,5 @@
  <!-- Start Footer Area -->
- <footer class="htc__foooter__area" style="background: rgba(0, 0, 0, 0) url(images/bg/8.jpg) no-repeat scroll center center / cover ;">
+ <footer class="htc__foooter__area" style="background: rgba(0, 0, 0, 0) url(images/bg/1.png) no-repeat scroll center center / cover ;">
     <div class="container">
         <div class="row">
             <div class="footer__container clearfix">
@@ -8,7 +8,7 @@
                     <div class="ft__widget">
                         <div class="ft__logo">
                             <a href="index.html">
-                                <img src="images/logo/uniqlo.png" alt="footer logo">
+                                <img src="{{ asset('images/logo/uniqlo.png') }}" alt="footer logo">
                             </a>
                         </div>
                         <div class="footer__details">

@@ -8,7 +8,7 @@
 
 
 -----------------------------------------------------------------------------------
-  
+
   CSS INDEX
   ===================
 
@@ -138,7 +138,7 @@
  #scrollUp {
     background: #cfcecc none repeat scroll 0 0;
 }
- 
+
 
 /*---------------------------------------
   End Scroll To Top
@@ -282,7 +282,11 @@
     color: #ff4136;
 }
 
-
+h2.product-name{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
 
 
 
@@ -974,7 +978,7 @@ h3.widget-title-modal {
 
 .popular__product__wrap .col-lg-4 {
     width: 100%;
-    
+
 }
 .popular__product__wrap{
     position: relative;
@@ -1653,7 +1657,7 @@ product__style--7
 
 /*------------------------------
   18. Our Shop Area
---------------------------------*/ 
+--------------------------------*/
 
 .shop__page .product__menu {
     text-align: left;
@@ -1748,7 +1752,7 @@ product__style--7
 
 /*------------------------------
   19. Our Shop Sidebar
---------------------------------*/ 
+--------------------------------*/
 
 
 .section-title-4 {
@@ -2531,7 +2535,7 @@ select.select-color {
     line-height: 44px;
     text-transform: uppercase;
 }
-.wrapper__sidebar .main__menu > li:hover > a, 
+.wrapper__sidebar .main__menu > li:hover > a,
 .wrapper__sidebar .main__menu > li.current > a {
     background: #fff none repeat scroll 0 0;
     color: #ff4136;
@@ -3134,7 +3138,7 @@ blockquote::before {
 }
 .wishlist-table table th {
     font-weight: 600;
-} 
+}
 .wishlist-table table th, .wishlist-table table td {
     border-bottom: 1px solid #c1c1c1;
     border-right: 1px solid #c1c1c1;
@@ -3147,7 +3151,7 @@ blockquote::before {
     padding: 0 15px;
     width: 20px;
 }
-.wishlist-table table .product-remove > a, 
+.wishlist-table table .product-remove > a,
 .table-content table .product-remove > a {
     font-size: 25px;
 }

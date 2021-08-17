@@ -64,4 +64,13 @@
 
     });
 
+    Route::group(['prefix' => 'transaction'], function () {
+
+        Route::get('', 'AdminTransactionController@index')->name('admin.transaction.index');
+    });
+
+    Route::group(['prefix' => 'user'], function () {
+
+        Route::get('', 'AdminUserController@index')->name('admin.user.index');
+    });
 });

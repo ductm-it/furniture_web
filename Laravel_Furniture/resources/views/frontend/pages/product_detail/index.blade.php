@@ -1,491 +1,307 @@
 @extends('layouts.master_frontend')
 @section('content')
-<div class="container">
-    <div class="row">
-        <div class="col-sm-3">
-            <div class="left-sidebar">
-                <h2>Category</h2>
-                <div class="panel-group category-products" id="accordian"><!--category-productsr-->
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
-                                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                    Sportswear
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="sportswear" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <ul>
-                                    <li><a href="">Nike </a></li>
-                                    <li><a href="">Under Armour </a></li>
-                                    <li><a href="">Adidas </a></li>
-                                    <li><a href="">Puma</a></li>
-                                    <li><a href="">ASICS </a></li>
-                                </ul>
+<!-- End Bradcaump area -->
+<!-- Start Product Details -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
+                <div class="product__details__container">
+                    <!-- Start Small images -->
+                    <ul class="product__small__images" role="tablist">
+                        <li role="presentation" class="pot-small-img active">
+                            <a href="#img-tab-1" role="tab" data-toggle="tab">
+                                <img src="images/product-details/small-img/1.jpg" alt="small-image">
+                            </a>
+                        </li>
+                        <li role="presentation" class="pot-small-img">
+                            <a href="#img-tab-2" role="tab" data-toggle="tab">
+                                <img src="images/product-details/small-img/2.jpg" alt="small-image">
+                            </a>
+                        </li>
+                        <li role="presentation" class="pot-small-img hidden-xs">
+                            <a href="#img-tab-3" role="tab" data-toggle="tab">
+                                <img src="images/product-details/small-img/3.jpg" alt="small-image">
+                            </a>
+                        </li>
+                        <li role="presentation" class="pot-small-img hidden-xs hidden-sm">
+                            <a href="#img-tab-4" role="tab" data-toggle="tab">
+                                <img src="images/product-details/small-img/4.jpg" alt="small-image">
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- End Small images -->
+                    <div class="product__big__images">
+                        <div class="portfolio-full-image tab-content">
+                            <div role="tabpanel" class="tab-pane fade in active" id="img-tab-1">
+                                <img src="images/product-details/big-img/1.jpg" alt="full-image">
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="img-tab-2">
+                                <img src="images/product-details/big-img/1.jpg" alt="full-image">
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="img-tab-3">
+                                <img src="images/product-details/big-img/1.jpg" alt="full-image">
+                            </div>
+                            <div role="tabpanel" class="tab-pane fade" id="img-tab-4">
+                                <img src="images/product-details/big-img/1.jpg" alt="full-image">
                             </div>
                         </div>
                     </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordian" href="#mens">
-                                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                    Mens
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="mens" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <ul>
-                                    <li><a href="">Fendi</a></li>
-                                    <li><a href="">Guess</a></li>
-                                    <li><a href="">Valentino</a></li>
-                                    <li><a href="">Dior</a></li>
-                                    <li><a href="">Versace</a></li>
-                                    <li><a href="">Armani</a></li>
-                                    <li><a href="">Prada</a></li>
-                                    <li><a href="">Dolce and Gabbana</a></li>
-                                    <li><a href="">Chanel</a></li>
-                                    <li><a href="">Gucci</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 smt-30 xmt-30">
+                <div class="htc__product__details__inner">
+                    <div class="pro__detl__title">
+                        <h2>Black Clock</h2>
                     </div>
-
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">
-                                <a data-toggle="collapse" data-parent="#accordian" href="#womens">
-                                    <span class="badge pull-right"><i class="fa fa-plus"></i></span>
-                                    Womens
-                                </a>
-                            </h4>
-                        </div>
-                        <div id="womens" class="panel-collapse collapse">
-                            <div class="panel-body">
-                                <ul>
-                                    <li><a href="">Fendi</a></li>
-                                    <li><a href="">Guess</a></li>
-                                    <li><a href="">Valentino</a></li>
-                                    <li><a href="">Dior</a></li>
-                                    <li><a href="">Versace</a></li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="pro__dtl__rating">
+                        <ul class="pro__rating">
+                            <li><span class="ti-star"></span></li>
+                            <li><span class="ti-star"></span></li>
+                            <li><span class="ti-star"></span></li>
+                            <li><span class="ti-star"></span></li>
+                            <li><span class="ti-star"></span></li>
+                        </ul>
+                        <span class="rat__qun">(Based on 0 Ratings)</span>
                     </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title"><a href="#">Kids</a></h4>
-                        </div>
+                    <div class="pro__details">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit, sed do eiusmod temf incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, nostr exercitation ullamco laboris nisi ut aliquip ex ea. </p>
                     </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title"><a href="#">Fashion</a></h4>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title"><a href="#">Households</a></h4>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title"><a href="#">Interiors</a></h4>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title"><a href="#">Clothing</a></h4>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title"><a href="#">Bags</a></h4>
-                        </div>
-                    </div>
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h4 class="panel-title"><a href="#">Shoes</a></h4>
-                        </div>
-                    </div>
-                </div><!--/category-products-->
-
-                <div class="brands_products"><!--brands_products-->
-                    <h2>Brands</h2>
-                    <div class="brands-name">
-                        <ul class="nav nav-pills nav-stacked">
-                            <li><a href=""> <span class="pull-right">(50)</span>Acne</a></li>
-                            <li><a href=""> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-                            <li><a href=""> <span class="pull-right">(27)</span>Albiro</a></li>
-                            <li><a href=""> <span class="pull-right">(32)</span>Ronhill</a></li>
-                            <li><a href=""> <span class="pull-right">(5)</span>Oddmolly</a></li>
-                            <li><a href=""> <span class="pull-right">(9)</span>Boudestijn</a></li>
-                            <li><a href=""> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+                    <ul class="pro__dtl__prize">
+                        <li class="old__prize">$15.21</li>
+                        <li>$10.00</li>
+                    </ul>
+                    <div class="pro__dtl__color">
+                        <h2 class="title__5">Choose Colour</h2>
+                        <ul class="pro__choose__color">
+                            <li class="red"><a href="#"><i class="zmdi zmdi-circle"></i></a></li>
+                            <li class="blue"><a href="#"><i class="zmdi zmdi-circle"></i></a></li>
+                            <li class="perpal"><a href="#"><i class="zmdi zmdi-circle"></i></a></li>
+                            <li class="yellow"><a href="#"><i class="zmdi zmdi-circle"></i></a></li>
                         </ul>
                     </div>
-                </div><!--/brands_products-->
-
-                <div class="price-range"><!--price-range-->
-                    <h2>Price Range</h2>
-                    <div class="well">
-                         <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
-                         <b>$ 0</b> <b class="pull-right">$ 600</b>
+                    <div class="pro__dtl__size">
+                        <h2 class="title__5">Size</h2>
+                        <ul class="pro__choose__size">
+                            <li><a href="#">xl</a></li>
+                            <li><a href="#">m</a></li>
+                            <li><a href="#">ml</a></li>
+                            <li><a href="#">lm</a></li>
+                            <li><a href="#">xxl</a></li>
+                        </ul>
                     </div>
-                </div><!--/price-range-->
-
-                <div class="shipping text-center"><!--shipping-->
-                    <img src="images/home/shipping.jpg" alt="" />
-                </div><!--/shipping-->
-
-            </div>
-        </div>
-
-        <div class="col-sm-9 padding-right">
-            <div class="product-details"><!--product-details-->
-                <div class="col-sm-5">
-                    <div class="view-product">
-                        <img src="images/product-details/1.jpg" alt="" />
-                        <h3>ZOOM</h3>
-                    </div>
-                    <div id="similar-product" class="carousel slide" data-ride="carousel">
-
-                          <!-- Wrapper for slides -->
-                            <div class="carousel-inner">
-                                <div class="item active">
-                                  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-                                  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-                                  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
-                                </div>
-                                <div class="item">
-                                  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-                                  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-                                  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
-                                </div>
-                                <div class="item">
-                                  <a href=""><img src="images/product-details/similar1.jpg" alt=""></a>
-                                  <a href=""><img src="images/product-details/similar2.jpg" alt=""></a>
-                                  <a href=""><img src="images/product-details/similar3.jpg" alt=""></a>
-                                </div>
-
-                            </div>
-
-                          <!-- Controls -->
-                          <a class="left item-control" href="#similar-product" data-slide="prev">
-                            <i class="fa fa-angle-left"></i>
-                          </a>
-                          <a class="right item-control" href="#similar-product" data-slide="next">
-                            <i class="fa fa-angle-right"></i>
-                          </a>
-                    </div>
-
-                </div>
-                <div class="col-sm-7">
-                    <div class="product-information"><!--/product-information-->
-                        <img src="images/product-details/new.jpg" class="newarrival" alt="" />
-                        <h2>Anne Klein Sleeveless Colorblock Scuba</h2>
-                        <p>Web ID: 1089772</p>
-                        <img src="images/product-details/rating.png" alt="" />
-                        <span>
-                            <span>US $59</span>
-                            <label>Quantity:</label>
-                            <input type="text" value="3" />
-                            <button type="button" class="btn btn-fefault cart">
-                                <i class="fa fa-shopping-cart"></i>
-                                Add to cart
-                            </button>
-                        </span>
-                        <p><b>Availability:</b> In Stock</p>
-                        <p><b>Condition:</b> New</p>
-                        <p><b>Brand:</b> E-SHOPPER</p>
-                        <a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>
-                    </div><!--/product-information-->
-                </div>
-            </div><!--/product-details-->
-
-            <div class="category-tab shop-details-tab"><!--category-tab-->
-                <div class="col-sm-12">
-                    <ul class="nav nav-tabs">
-                        <li><a href="#details" data-toggle="tab">Details</a></li>
-                        <li><a href="#companyprofile" data-toggle="tab">Company Profile</a></li>
-                        <li><a href="#tag" data-toggle="tab">Tag</a></li>
-                        <li class="active"><a href="#reviews" data-toggle="tab">Reviews (5)</a></li>
-                    </ul>
-                </div>
-                <div class="tab-content">
-                    <div class="tab-pane fade" id="details" >
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/gallery1.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
+                    <div class="product-action-wrap">
+                        <div class="prodict-statas"><span>Quantity :</span></div>
+                        <div class="product-quantity">
+                            <form id='myform' method='POST' action='#'>
+                                <div class="product-quantity">
+                                    <div class="cart-plus-minus">
+                                        <input class="cart-plus-minus-box" type="text" name="qtybutton" value="02">
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/gallery2.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/gallery3.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/gallery4.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade" id="companyprofile" >
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/gallery1.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/gallery3.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/gallery2.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/gallery4.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade" id="tag" >
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/gallery1.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/gallery2.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/gallery3.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-3">
-                            <div class="product-image-wrapper">
-                                <div class="single-products">
-                                    <div class="productinfo text-center">
-                                        <img src="images/home/gallery4.jpg" alt="" />
-                                        <h2>$56</h2>
-                                        <p>Easy Polo Black Edition</p>
-                                        <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane fade active in" id="reviews" >
-                        <div class="col-sm-12">
-                            <ul>
-                                <li><a href=""><i class="fa fa-user"></i>EUGEN</a></li>
-                                <li><a href=""><i class="fa fa-clock-o"></i>12:41 PM</a></li>
-                                <li><a href=""><i class="fa fa-calendar-o"></i>31 DEC 2014</a></li>
-                            </ul>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            <p><b>Write Your Review</b></p>
-
-                            <form action="#">
-                                <span>
-                                    <input type="text" placeholder="Your Name"/>
-                                    <input type="email" placeholder="Email Address"/>
-                                </span>
-                                <textarea name="" ></textarea>
-                                <b>Rating: </b> <img src="images/product-details/rating.png" alt="" />
-                                <button type="button" class="btn btn-default pull-right">
-                                    Submit
-                                </button>
                             </form>
                         </div>
                     </div>
-
+                    <ul class="pro__dtl__btn">
+                        <li class="buy__now__btn"><a href="#">buy now</a></li>
+                        <li><a href="#"><span class="ti-heart"></span></a></li>
+                        <li><a href="#"><span class="ti-email"></span></a></li>
+                    </ul>
+                    <div class="pro__social__share">
+                        <h2>Share :</h2>
+                        <ul class="pro__soaial__link">
+                            <li><a href="https://twitter.com/devitemsllc" target="_blank"><i class="zmdi zmdi-twitter"></i></a></li>
+                            <li><a href="https://www.instagram.com/devitems/" target="_blank"><i class="zmdi zmdi-instagram"></i></a></li>
+                            <li><a href="https://www.facebook.com/devitems/?ref=bookmarks" target="_blank"><i class="zmdi zmdi-facebook"></i></a></li>
+                            <li><a href="https://plus.google.com/" target="_blank"><i class="zmdi zmdi-google-plus"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
-            </div><!--/category-tab-->
-
-            <div class="recommended_items"><!--recommended_items-->
-                <h2 class="title text-center">recommended items</h2>
-
-                <div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="images/home/recommend1.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Product Details -->
+<!-- Start Product tab -->
+<section class="htc__product__details__tab bg__white pb--120">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                <ul class="product__deatils__tab mb--60" role="tablist">
+                    <li role="presentation" class="active">
+                        <a href="#description" role="tab" data-toggle="tab">Description</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#sheet" role="tab" data-toggle="tab">Data sheet</a>
+                    </li>
+                    <li role="presentation">
+                        <a href="#reviews" role="tab" data-toggle="tab">Reviews</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="product__details__tab__content">
+                    <!-- Start Single Content -->
+                    <div role="tabpanel" id="description" class="product__tab__content fade in active">
+                        <div class="product__description__wrap">
+                            <div class="product__desc">
+                                <h2 class="title__6">Details</h2>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis noexercit ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id.</p>
                             </div>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="images/home/recommend2.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="images/home/recommend3.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="images/home/recommend1.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="images/home/recommend2.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-sm-4">
-                                <div class="product-image-wrapper">
-                                    <div class="single-products">
-                                        <div class="productinfo text-center">
-                                            <img src="images/home/recommend3.jpg" alt="" />
-                                            <h2>$56</h2>
-                                            <p>Easy Polo Black Edition</p>
-                                            <button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="pro__feature">
+                                <h2 class="title__6">Features</h2>
+                                <ul class="feature__list">
+                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Duis aute irure dolor in reprehenderit in voluptate velit esse</a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Irure dolor in reprehenderit in voluptate velit esse</a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Sed do eiusmod tempor incididunt ut labore et </a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Nisi ut aliquip ex ea commodo consequat.</a></li>
+                                </ul>
                             </div>
                         </div>
                     </div>
-                     <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
-                        <i class="fa fa-angle-left"></i>
-                      </a>
-                      <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
-                        <i class="fa fa-angle-right"></i>
-                      </a>
+                    <!-- End Single Content -->
+                    <!-- Start Single Content -->
+                    <div role="tabpanel" id="sheet" class="product__tab__content fade">
+                        <div class="pro__feature">
+                                <h2 class="title__6">Data sheet</h2>
+                                <ul class="feature__list">
+                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Duis aute irure dolor in reprehenderit in voluptate velit esse</a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Irure dolor in reprehenderit in voluptate velit esse</a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Irure dolor in reprehenderit in voluptate velit esse</a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Sed do eiusmod tempor incididunt ut labore et </a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Sed do eiusmod tempor incididunt ut labore et </a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Nisi ut aliquip ex ea commodo consequat.</a></li>
+                                    <li><a href="#"><i class="zmdi zmdi-play-circle"></i>Nisi ut aliquip ex ea commodo consequat.</a></li>
+                                </ul>
+                            </div>
+                    </div>
+                    <!-- End Single Content -->
+                    <!-- Start Single Content -->
+                    <div role="tabpanel" id="reviews" class="product__tab__content fade">
+                        <div class="review__address__inner">
+                            <!-- Start Single Review -->
+                            <div class="pro__review">
+                                <div class="review__thumb">
+                                    <img src="images/review/1.jpg" alt="review images">
+                                </div>
+                                <div class="review__details">
+                                    <div class="review__info">
+                                        <h4><a href="#">Gerald Barnes</a></h4>
+                                        <ul class="rating">
+                                            <li><i class="zmdi zmdi-star"></i></li>
+                                            <li><i class="zmdi zmdi-star"></i></li>
+                                            <li><i class="zmdi zmdi-star"></i></li>
+                                            <li><i class="zmdi zmdi-star-half"></i></li>
+                                            <li><i class="zmdi zmdi-star-half"></i></li>
+                                        </ul>
+                                        <div class="rating__send">
+                                            <a href="#"><i class="zmdi zmdi-mail-reply"></i></a>
+                                            <a href="#"><i class="zmdi zmdi-close"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="review__date">
+                                        <span>27 Jun, 2016 at 2:30pm</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend. Phasellus a felis at estei to bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere dolor non.</p>
+                                </div>
+                            </div>
+                            <!-- End Single Review -->
+                            <!-- Start Single Review -->
+                            <div class="pro__review ans">
+                                <div class="review__thumb">
+                                    <img src="images/review/2.jpg" alt="review images">
+                                </div>
+                                <div class="review__details">
+                                    <div class="review__info">
+                                        <h4><a href="#">Gerald Barnes</a></h4>
+                                        <ul class="rating">
+                                            <li><i class="zmdi zmdi-star"></i></li>
+                                            <li><i class="zmdi zmdi-star"></i></li>
+                                            <li><i class="zmdi zmdi-star"></i></li>
+                                            <li><i class="zmdi zmdi-star-half"></i></li>
+                                            <li><i class="zmdi zmdi-star-half"></i></li>
+                                        </ul>
+                                        <div class="rating__send">
+                                            <a href="#"><i class="zmdi zmdi-mail-reply"></i></a>
+                                            <a href="#"><i class="zmdi zmdi-close"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="review__date">
+                                        <span>27 Jun, 2016 at 2:30pm</span>
+                                    </div>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer accumsan egestas elese ifend. Phasellus a felis at estei to bibendum feugiat ut eget eni Praesent et messages in con sectetur posuere dolor non.</p>
+                                </div>
+                            </div>
+                            <!-- End Single Review -->
+                        </div>
+                        <!-- Start RAting Area -->
+                        <div class="rating__wrap">
+                            <h2 class="rating-title">Write  A review</h2>
+                            <h4 class="rating-title-2">Your Rating</h4>
+                            <div class="rating__list">
+                                <!-- Start Single List -->
+                                <ul class="rating">
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                </ul>
+                                <!-- End Single List -->
+                                <!-- Start Single List -->
+                                <ul class="rating">
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                </ul>
+                                <!-- End Single List -->
+                                <!-- Start Single List -->
+                                <ul class="rating">
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                </ul>
+                                <!-- End Single List -->
+                                <!-- Start Single List -->
+                                <ul class="rating">
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                </ul>
+                                <!-- End Single List -->
+                                <!-- Start Single List -->
+                                <ul class="rating">
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                    <li><i class="zmdi zmdi-star-half"></i></li>
+                                </ul>
+                                <!-- End Single List -->
+                            </div>
+                        </div>
+                        <!-- End RAting Area -->
+                        <div class="review__box">
+                            <form id="review-form">
+                                <div class="single-review-form">
+                                    <div class="review-box name">
+                                        <input type="text" placeholder="Type your name">
+                                        <input type="email" placeholder="Type your email">
+                                    </div>
+                                </div>
+                                <div class="single-review-form">
+                                    <div class="review-box message">
+                                        <textarea placeholder="Write your review"></textarea>
+                                    </div>
+                                </div>
+                                <div class="review-btn">
+                                    <a class="fv-btn" href="#">submit review</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- End Single Content -->
                 </div>
-            </div><!--/recommended_items-->
-
+            </div>
         </div>
     </div>
-</div>
+</section>
+<!-- End Product tab -->
 @stop

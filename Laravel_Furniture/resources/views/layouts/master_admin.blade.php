@@ -341,13 +341,6 @@
           </a>
         </li>
         <li class="treeview">
-          <a href="#">
-            <i class="fa fa-files-o"></i>
-            <span>Layout Options</span>
-            <span class="pull-right-container">
-              <span class="label label-primary pull-right">4</span>
-            </span>
-          </a>
           <ul class="treeview-menu">
             <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
             <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
@@ -372,6 +365,18 @@
         <li class="">
             <a href=" {{ route('admin.product.index') }}">
               <i class="fa fa-database"></i> <span>Product</span>
+            </a>
+        </li>
+
+        <li class="">
+            <a href=" {{ route('admin.transaction.index') }}">
+              <i class="fa fa-google-wallet"></i> <span>Transaction</span>
+            </a>
+        </li>
+
+        <li class="">
+            <a href=" {{ route('admin.user.index') }}">
+              <i class="fa fa-user"></i> <span>User</span>
             </a>
         </li>
 

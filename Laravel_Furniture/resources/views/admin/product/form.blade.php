@@ -1,4 +1,4 @@
-<form role="form" action="" method="POST">
+<form role="form" action="" method="POST" enctype="multipart/form-data">
     @csrf
     <div class="box-body">
         <div class="form-group {{ $errors->first('pro_name') ? ' has-error' : '' }}">
@@ -59,7 +59,10 @@
                 <span class="text-danger">{{ $errors->first('pro_content') }}</span>
             @endif
         </div>
-
+        <div class="box-body">
+            <label for="avatar">Choose a profile picture:</label>
+            <input type="file" id="avatar" name="pro_avatar">
+        </div>
         {{-- <div class="box-body">
             <label>Avatar</label>
             <input type ="text" id="summernote-editor" name="pro_avatar" class="form-control"></textarea>
@@ -67,7 +70,7 @@
                 <span class="text-danger">{{ $errors->first('pro_avatar') }}</span>
             @endif
         </div> --}}
-        <div class="input-group">
+        {{-- <div class="input-group">
             <span class="input-group-btn">
               <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
                 <i class="fa fa-picture-o"></i> Choose
@@ -75,7 +78,7 @@
             </span>
             <input id="thumbnail" class="form-control" type="text" name="filepath">
           </div>
-          <img id="holder" style="margin-top:15px;max-height:100px;">
+          <img id="holder" style="margin-top:15px;max-height:100px;"> --}}
             {{-- <div class="col-md-6">
                 <div class="form-group">
                     <div id="holder" class="img-fuild">
@@ -85,22 +88,7 @@
             </div>
         </div> --}}
 
-        {{-- <div class="box-body">
-            <label for="exampleInputFile">Ảnh Đại Diện</label>
-            <div class="col-md-6">
-                <div class="input-group">
-                    <span class="input-group-btn">
-                    <a id="lfm" data-input="thumbnail" data-preview="holder" class="btn btn-primary">
-                        <i class="fa fa-picture-o"></i> Choose
-                    </a>
-                    </span>
-                    <input id="thumbnail" class="form-control" type="text" name="pro_avatar">
-                </div>
-                <img id="holder" style="margin-top:15px;max-height:100px;">
-                <div>
-            </div>
-            </div>
-        </div> --}}
+
         {{-- <div class="box-body">
             <label for="exampleInputFile">Ảnh Đại Diện</label>
             <input type="file" id="exampleInputFile" name="pro_avatar">
@@ -178,8 +166,8 @@
     })
     });
 </script>
-<script>
+{{-- <script>
      $('#lfm').filemanager('image');
 
-</script>
+</script> --}}
 

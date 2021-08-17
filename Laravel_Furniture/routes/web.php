@@ -26,4 +26,23 @@ Route::group(['namespace' => 'App\\Http\\Controllers\\Frontend'], function() {
 
 });
 
+Route::group(['namespace' => 'App\\Http\\Controllers\\Auth','prefix' => 'account'], function(){
+    Route::get('register', 'RegisterController@getFormRegister')->name('get.register');
+    Route::post('register', 'RegisterController@postRegister');
 
+    Route::get('login', 'LoginController@getFormLogin')->name('get.login');
+    Route::post('login', 'LoginController@postLogin');
+
+    Route::get('logout', 'LogoutController@getLogout')->name('get.logout');
+
+});
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard');
+})->name('dashboard');
+
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

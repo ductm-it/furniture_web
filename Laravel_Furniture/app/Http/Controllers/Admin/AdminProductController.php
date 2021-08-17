@@ -13,7 +13,7 @@ class AdminProductController extends AdminController
 {
     public function index()
     {
-        $products = Product::paginate(10);
+        $products = Product::paginate(7);
         $viewData = [
             'products' => $products
         ];
@@ -30,7 +30,13 @@ class AdminProductController extends AdminController
         $data['pro_slug']     = Str::slug($request->pro_name);
         $data['created_at']   = Carbon::now();
 
-        dd($data);
+          if ($request->hasFile('pro_avatar')) {
+            $image = upload_image('pro_avatar');
+            if (isset($image['name']))
+            {
+                $data['pro_avatar'] = $image['name'];
+            }
+        }
         $id = Product::insertGetId($data);
 
         return redirect()->back();
@@ -50,10 +56,12 @@ class AdminProductController extends AdminController
         $data['pro_slug']     = Str::slug($request->pro_name);
         $data['updated_at'] = Carbon::now();
 
-        if ($request->pro_avatar) {
+        if ($request->hasFile('pro_avatar')) {
             $image = upload_image('pro_avatar');
-            if (!empty($image['code']))
+            if (isset($image['name']))
+            {
                 $data['pro_avatar'] = $image['name'];
+            }
         }
         $product->update($data);
         return redirect()->back();

@@ -28,7 +28,7 @@
                                     <tr>
                                         <th style="width: 10px">STT</th>
                                         <th>Name</th>
-                                        <th>Avatar</th>
+                                        {{-- <th>Avatar</th> --}}
                                         <th>Status</th>
                                         <th>Hot</th>
                                         <th>Time</th>
@@ -39,7 +39,7 @@
                                             <tr>
                                                 <td>{{ $category->id }}</td>
                                                 <td>{{ $category->c_name }}</td>
-                                                <td>Update software</td>
+                                                {{-- <td>Update software</td> --}}
                                                 <td>
                                                     @if($category-> c_status == 1)
                                                         <a href="{{ route('admin.category.active', $category -> id) }}" class = "label label-info">Show</a>
