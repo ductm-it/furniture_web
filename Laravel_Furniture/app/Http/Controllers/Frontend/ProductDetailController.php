@@ -9,15 +9,13 @@ use App\Models\Product;
 
 class ProductDetailController extends Controller
 {
-    public function getProductDetail(){
-        // $products = Product::paginate(12);
+    public function getProductDetail($pro_slug){
 
-        // $categories = Category::paginate(12);
-
-        // $viewData = [
-        //     'categories' => $categories,
-        //     'products' => $products
-        // ];
-        return view('frontend.pages.product_detail.index');
+        $product = Product::where('pro_slug',$pro_slug)->first();
+        $viewData = [
+            'product' => $product
+        ];
+        // dd($viewData);
+        return view('frontend.pages.product_detail.index', $viewData);
     }
 }

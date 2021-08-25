@@ -16,9 +16,6 @@
     <section class="content">
         <!-- Default box -->
         <div class="box">
-            <div class="box-header">
-                <h3 class="box-title"><a href=" {{ route('admin.user.create')}} " class="btn btn-primary">Add New <i class="fa fa-plus"></i></a></h3>
-            </div>
             <div class="box-body">
                 <div class="col-md-12">
                     <div class="box">
@@ -28,40 +25,20 @@
                                     <tr>
                                         <th style="width: 10px">STT</th>
                                         <th>Name</th>
-                                        <th>Avatar</th>
-                                        <th>Price</th>
-                                        <th>Description</th>
-                                        <th>Hot</th>
-                                        <th>Status</th>
+                                        <th>Email</th>
+                                        {{-- <th>Phone</th> --}}
                                         <th>Action</th>
                                     </tr>
-                                    @if(isset($products))
-                                    @foreach($products as $product)
+                                    @if(isset($users))
+                                    @foreach($users as $user)
                                         <tr>
-                                            <td>{{ $product->id }}</td>
-                                            <td>{{ $product->pro_name }}</td>
+                                            <td>{{ $user->id }}</td>
+                                            <td>{{ $user->name }}</td>
+                                            <td>{{ $user->email }}</td>
+                                            {{-- <td>{{ $user->phone }}</td> --}}
                                             <td>
-                                                <img src="{{ pare_url_file($product -> pro_avatar) }}" style="width:80px">
-                                            </td>
-                                            <td>{{ number_format($product->pro_price , 0, '', '.') }} VND</td>
-                                            <td>{{ $product->pro_description }}</td>
-                                            <td>
-                                                @if($product-> pro_hot == 1)
-                                                    <a href="{{ route('admin.product.hot', $product -> id)}}" class = "label label-info">Hot</a>
-                                                @else
-                                                    <a href="{{ route('admin.product.hot', $product -> id)}}" class = "label label-default">None</a>
-                                                @endif
-                                            </td>
-                                            <td>
-                                                @if($product-> pro_active == 1)
-                                                    <a href="{{ route('admin.product.active', $product -> id)}}" class = "label label-info">Active</a>
-                                                @else
-                                                    <a href="{{ route('admin.product.active', $product -> id)}}" class = "label label-default">Hide</a>
-                                                @endif
-                                            </td>
-                                            <td>
-                                                <a href="{{ route('admin.product.update', $product -> id) }}" class="btn btn-primary"><i class="fa fa-pencil"></i>Edit</a>
-                                                <a href="{{ route('admin.product.delete', $product -> id) }}" class="btn btn-danger"><i class="fa fa-trash"></i>Delete</a>
+                                                <a href="{{ route('admin.user.update', $user -> id) }}" class="btn btn-primary"><i class="fa fa-pencil"></i>Edit</a>
+                                                <a href="{{ route('admin.user.delete', $user -> id) }}" class="btn btn-danger"><i class="fa fa-trash"></i>Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -70,9 +47,9 @@
                             </table>
                         </div>
                     </div>
-                    <div class="d-flex justify-content-center">
+                    {{-- <div class="d-flex justify-content-center">
                         {{ $products->links(); }}
-                    </div>
+                    </div> --}}
                 </div>
         </div>
     </section>

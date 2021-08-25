@@ -51,7 +51,7 @@
             <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12 smt-30 xmt-30">
                 <div class="htc__product__details__inner">
                     <div class="pro__detl__title">
-                        <h2>Black Clock</h2>
+                        <h2>{{ $product -> pro_name }}</h2>
                     </div>
                     <div class="pro__dtl__rating">
                         <ul class="pro__rating">
@@ -102,7 +102,7 @@
                         </div>
                     </div>
                     <ul class="pro__dtl__btn">
-                        <li class="buy__now__btn"><a href="#">buy now</a></li>
+                        <li class="buy__now__btn"><a href="{{ route('get.shopping.add', $product->id) }}">buy now</a></li>
                         <li><a href="#"><span class="ti-heart"></span></a></li>
                         <li><a href="#"><span class="ti-email"></span></a></li>
                     </ul>
