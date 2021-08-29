@@ -38,7 +38,6 @@
                                     <div class="box-footer text-center">
                                         <a href=" {{ route('admin.category.index')}} " class="btn btn-danger">Quay Lại <i class="fa fa-undo"></i></a>
                                         <button type="submit" class="btn btn-success" onclick="succes_toastr()" id="add">Submit <i class="fa fa-save"></i></button>
-
                                     </div>
                                 </div>
                             </form>

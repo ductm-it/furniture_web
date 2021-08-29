@@ -78,4 +78,11 @@
         Route::get('delete/{id}', 'AdminUserController@delete')->name('admin.user.delete');
 
     });
+
+    Route::group(['prefix' => 'transaction'], function () {
+
+        Route::get('', 'AdminTransactionController@index')->name('admin.transaction.index');
+        Route::get('delete/{id}', 'AdminTransactionController@delete')->name('admin.transaction.delete');
+
+    });
 });

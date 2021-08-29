@@ -27,41 +27,41 @@
                                 <tbody>
                                     <tr>
                                         <th style="width: 10px">STT</th>
-                                        <th>Name</th>
-                                        <th>Avatar</th>
-                                        <th>Price</th>
-                                        <th>Description</th>
-                                        <th>Hot</th>
+                                        <th>Info</th>
+                                        <th>Money</th>
+                                        <th>Account</th>
                                         <th>Status</th>
+                                        <th>Time</th>
                                         <th>Action</th>
                                     </tr>
-                                    @if(isset($products))
-                                    @foreach($products as $product)
+                                    @if(isset($transactions))
+                                    @foreach($transactions as $transaction)
                                         <tr>
-                                            <td>{{ $product->id }}</td>
-                                            <td>{{ $product->pro_name }}</td>
+                                            <td>{{ $transaction->id }}</td>
                                             <td>
-                                                <img src="{{ pare_url_file($product -> pro_avatar) }}" style="width:80px">
+                                                <ul>
+                                                    <li>Name: {{ $transaction->tst_name }}</li>
+                                                    <li>Email: {{ $transaction->tst_email }}</li>
+                                                    <li>Phone: {{ $transaction->tst_phone }}</li>
+                                                    <li>Address: {{ $transaction->tst_address }}</li>
+                                                </ul>
                                             </td>
-                                            <td>{{ number_format($product->pro_price , 0, '', '.') }} VND</td>
-                                            <td>{{ $product->pro_description }}</td>
+                                            <td>{{ number_format($transaction->tst_total_money , 0, '', '.') }} VND</td>
                                             <td>
-                                                @if($product-> pro_hot == 1)
-                                                    <a href="{{ route('admin.product.hot', $product -> id)}}" class = "label label-info">Hot</a>
+                                                @if($transaction->tst_user_id)
+                                                    <span class="label label-danger">Thành Viên</span>
                                                 @else
-                                                    <a href="{{ route('admin.product.hot', $product -> id)}}" class = "label label-default">None</a>
+                                                    <span class="label label-success">Khách</span>
                                                 @endif
                                             </td>
                                             <td>
-                                                @if($product-> pro_active == 1)
-                                                    <a href="{{ route('admin.product.active', $product -> id)}}" class = "label label-info">Active</a>
-                                                @else
-                                                    <a href="{{ route('admin.product.active', $product -> id)}}" class = "label label-default">Hide</a>
-                                                @endif
+                                                <span class="label label-{{ $transaction->getStatus($transaction->tst_status)['class'] }}">
+                                                    {{ $transaction->getStatus($transaction->tst_status)['name'] }}
+                                                </span>
                                             </td>
+                                            <td>{{ $transaction->created_at }}</td>
                                             <td>
-                                                <a href="{{ route('admin.product.update', $product -> id) }}" class="btn btn-primary"><i class="fa fa-pencil"></i>Edit</a>
-                                                <a href="{{ route('admin.product.delete', $product -> id) }}" class="btn btn-danger"><i class="fa fa-trash"></i>Delete</a>
+                                                <a href="{{ route('admin.transaction.delete', $transaction -> id) }}" class="btn btn-danger"><i class="fa fa-trash"></i>Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -71,7 +71,7 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                        {{ $products->links(); }}
+                        {{ $transactions->links(); }}
                     </div>
                 </div>
         </div>

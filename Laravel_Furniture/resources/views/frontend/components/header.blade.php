@@ -113,7 +113,7 @@
                                             <li><a href="login-register.html">login & register</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="contact.html">contact</a></li>
+                                    <li><a href="{{ route('get.contact') }}">contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -270,7 +270,7 @@
                 </ul>
                 <ul class="shopping__btn">
                     <li><a href="{{ route('get.shopping.list') }}">View Cart</a></li>
-                    <li class="shp__checkout"><a href="checkout.html">Checkout</a></li>
+                    <li class="shp__checkout"><a href="{{ route('get.shopping.pay') }}">Checkout</a></li>
                 </ul>
             </div>
         </div>
